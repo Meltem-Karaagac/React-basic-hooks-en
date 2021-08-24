@@ -7,9 +7,8 @@ const Users = () => {
 
 
     const getUsers = () => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(response => response.json())
-            .then(json => setUsers(json))
+        axios.get('https://jsonplaceholder.typicode.com/users')
+        .then((response) => setUsers(response.data))
     }
 
 
@@ -18,7 +17,7 @@ const Users = () => {
         <div className="users">
             <h2>Users</h2>
             <button onClick={getUsers}>Get Users</button>
-            <div className="user-cards">
+            <div className="users-cards">
             {users.map((user) => {
                 return(
                     <div className="useritem">
