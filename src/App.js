@@ -8,11 +8,11 @@ function App() {
   const [funcComp, setFuncComp] = useState(true);
   return (
     <div className="App">
-      <button onClick={() => setClassComp(!classComp)}>Toggle Class Comp</button>
+      {/* <button onClick={() => setClassComp(!classComp)}>Toggle Class Comp</button>
       {classComp && <ClassComponent />}
       <button onClick={() => setFuncComp(!funcComp)}>Toggle Func Comp</button>
-      {funcComp && <FunctionalComponent />}
-      {/* <Users /> */}
+      {funcComp && <FunctionalComponent />} */}
+      <Users />
     </div>
   );
 }
